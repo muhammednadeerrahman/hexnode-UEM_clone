@@ -2,6 +2,8 @@
 
 This repository contains the Hexnode UEM Solution webpage Clone project, built using React.js for the front-end framework and Tailwind CSS for styling. Follow the steps below to set up and run the project on your local machine.
 
+## live url : https://hexnode-uem-clone-nadeerdeveloper.vercel.app/
+
 ## Technologies Used
 
 React.js - Frontend framework
@@ -33,6 +35,8 @@ hexnode-clone/
 │── tailwind.config.js  # Tailwind configuration
 │── README.md        # Project documentation
 
+
+# git repo : https://github.com/muhammednadeerrahman/hexnode-UEM_clone
 
 # Installation & Setup
 
