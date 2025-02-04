@@ -1,0 +1,64 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+  font-family: "mulish_bold";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../public/fonts/mulish-bold-webfont.woff) format("woff");
+}
+
+@font-face {
+  font-family: "mulish_semibold";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../public/fonts/mulish-semibold-webfont.woff) format("woff");
+}
+
+
+@font-face {
+  font-family: "mulish_regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../public/fonts/mulish-regular-webfont.woff)
+    format("woff");
+}
+
+@font-face {
+  font-family: "mulish_medium";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../public/fonts/Mulish-Medium.woff)
+    format("woff");
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: "mulish_regular";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  background: none;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
