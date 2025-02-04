@@ -8,7 +8,7 @@ import NewsTab from './messageData/NewsTab';
 export default function MessageContainer() {
     const [currentActive, setCurrentACtive] = useState(0)
     return (
-        <div className={`fixed flex flex-col justify-between overflow-hidden bottom-24 z-50 right-7 h-[75vh] si:w-[280px] sj:w-[300px] sk:w-[400px] rounded-[8px] bg-white message-container`}>
+        <div className={`fixed flex flex-col justify-between overflow-hidden bottom-24 z-50 right-7 max-sm:h-[50vh] sm:h-[75vh] si:w-[280px] sj:w-[300px] sk:w-[400px] rounded-[8px] bg-white message-container`}>
 
             {currentActive == 0 && <HomeTab />}
             {currentActive == 1 && <MeassageTab />}
