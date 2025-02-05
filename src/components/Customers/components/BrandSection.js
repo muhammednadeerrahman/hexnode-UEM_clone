@@ -1,13 +1,20 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { customerBrand } from '../../../utils/StaticUtils';
 
 export default function BrandSection() {
     const scrollRef = useRef(null);
+    const [brands, setBrands] = useState([...customerBrand]); 
 
     useEffect(() => {
         const interval = setInterval(() => {
             if (scrollRef.current) {
-                scrollRef.current.scrollLeft += 186;
+                scrollRef.current.scrollLeft += 100;
+                if (
+                    scrollRef.current.scrollLeft + scrollRef.current.clientWidth >= 
+                    scrollRef.current.scrollWidth - 100
+                ) {
+                    setBrands((prev) => [...prev, ...customerBrand]);
+                }
             }
         }, 1000);
 
@@ -25,7 +32,7 @@ export default function BrandSection() {
                 onTouchMove={(e) => e.preventDefault()} // Disable touch scrolling
             >
 
-                {[...customerBrand, ...customerBrand, ...customerBrand, ...customerBrand].map((item, index) => (
+                {brands.map((item, index) => (
                     <div key={index} className="max-sm:min-w-[80px] sm:min-w-[90px] md:min-w-[120px] md:min-w-[140px] xl:min-w-[186px]  ">
                         <img  height="auto" src={item} alt="brandLogo" loading="lazy" className='w-[100%] h-[100%]' />
                     </div>
